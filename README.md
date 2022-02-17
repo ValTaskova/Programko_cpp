@@ -9,4 +9,4 @@ V súbore main.cpp nájdete kód s rôznymi typmi premenných, ktoré sme si uk�
 
 Posledné dve možnosti sú zakomentovane viacriadkovým komentárom (zapisuje sa takto: /* ... */), ktoré program ignoruje.
 Kód si môžete skopírovať, vyskúšať alebo uložiť, je to na vás.
-Budem sem pridávať všetky kódy z hodín, ktoré nájdete v pomenovaných branchach, pričom kód z poslednej hodiny bude vždy v branchi main.
+Budem sem pridávať všetky kódy z hodín, ktoré nájdete v pomenovaných branchach (hneď naľavo od názvu Programko_cpp), pričom kód z poslednej hodiny bude vždy v branchi main.
