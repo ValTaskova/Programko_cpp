@@ -1,7 +1,5 @@
 #include <iostream>
 
-#define VZDIALENOST2 10; //definovanie konstanty v C, co sa v C++ nahradilo zadanim "const" pred premennu, ale stale to mozeme pouzit
-
 int main() {
     int cislo = 1;
     double cislo2 = 1.5;
@@ -22,7 +20,6 @@ int main() {
     
    const int vzdialenost = 10;  //konstanta, ktoru uz nemozeme v programe prepisovat
                                 //const mozeme pouzit s akymkolvek datovym typom (int, double, char, float, long, short, long long)
-                                //const nahradilo "#define VZDIALENOST2 10;", ale aj toto sa da pouzit
                                 //cosnst moze byt signed alebo unsigned => unsigned const int cislo = 3;
 
 
