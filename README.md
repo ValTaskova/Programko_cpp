@@ -1,4 +1,4 @@
-# Programko C++ - Dátové typy
+# Programko C++ - Matematické operácie
 
 V súbore main.cpp nájdete kód, ktorý obsahuje, to čo sme robili na dnešnej hodine:
 <ul> 
