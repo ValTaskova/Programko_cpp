@@ -18,5 +18,5 @@ Hodiny v branchi:
 <ul> 
   <li>1. hodina: - </li>
   <li>2. hodina: "hodina_II-datove_typy"</li>
-  <li>2. hodina: "hodina_III-mat_operacie"</li>
+  <li>3. hodina: "hodina_III-mat_operacie"</li>
 </ul>
