@@ -1,20 +1,22 @@
 # Programko C++ - Dátové typy
 
-V súbore main.cpp nájdete kód s rôznymi typmi premenných, ktoré sme si ukázali na hodine. Nájdete 3 druhy výpisov:
+V súbore main.cpp nájdete kód, ktorý obsahuje, to čo sme robili na dnešnej hodine:
 <ul> 
-  <li>Výpis hodnoty premenej a jej veľkosť (teda koľko pamäte premenná zaberá v PC)</li>
-  <li>Výpis hodnoty premennej</li>
-  <li>Výpis veľkosti premennej (teda koľko pamäte premenná zaberá v PC)</li>
+  <li>Základné matematické operácie: +, -, *, /, %</li>
+  <li>Inkrementáciu/Dekremntáciu: premenna++, premenna--, ++premenna, --premenna</li>
+  <li>Skrátený zápis matematických operácií</li>
+  <li>Úvod do podmienok</li>
 </ul>
 
-Posledné dve možnosti sú zakomentovane viacriadkovým komentárom (zapisuje sa takto: /* ... */), ktoré program ignoruje.
+
 Kód si môžete skopírovať, vyskúšať alebo uložiť, je to na vás.
 Budem sem pridávať všetky kódy z hodín, ktoré nájdete v pomenovaných branchach (hneď naľavo od názvu Programko_cpp), pričom kód z poslednej hodiny bude vždy v branchi main.
 
-<strong>Branch MAIN: 2.hodina</strong>
+<strong>Branch MAIN: 3.hodina</strong>
 
 Hodiny v branchi:
 <ul> 
   <li>1. hodina: - </li>
   <li>2. hodina: "hodina_II-datove_typy"</li>
+  <li>2. hodina: "hodina_III-mat_operacie"</li>
 </ul>
