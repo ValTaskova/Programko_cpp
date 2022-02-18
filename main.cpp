@@ -1,83 +1,75 @@
 #include <iostream>
+#include<cmath>
 
-int main() {
+const int x = 6;    //globalna premenna, je vidiet v celom programe
+
+int main() {        //vo funkcii su lokalne premenne, vidiet je len vo funkcii main
+
+    //inicializovane premenne
     int cislo = 1;
     double cislo2 = 1.5;
     char znak = 'c';
-    bool hodnota = true;    //najpouzivanie typy premennych v C++
+    bool hodnota = true;
+
+    //deklarovane premenne
+    int premenna;
+    double premenna2;
+    char c;
+
+    premenna = 8;
 
 
-    float cislo3 = 2.5;
-    long cislo4 = 3;
-    long long cislo5 = 4;
-    short cislo6 = 5;        //dalsie, menej pouzivane typy premennych
+    int e, d, w, w2; 
 
-    unsigned int a = 1;     //neznamienkova premenna len pre kladne cisla a 0
-    signed int b = -1;      //znamienkova premenna aj pre zaporne cisla
-                            //unsigned a signed mozeme pouzit s akymkolvek datovym typom (int, double, char, float, long, short, long long)
-                            //pokial napiseme len "int", tak kompilator k nemu automaticky priradi "signed"
+    e = 5 + znak;       //v premennej znak je ulozena hodnota 'c', ktora ma ascii hodnotu 99
+    std::cout << e << std::endl; 
+
+    unsigned char z = 129;      //vypise hodnotu 129, pokial odstranime unsigned, tak vypise hodnotu -127 
+    std::cout << int(z) << std::endl; 
+
+    cislo = 3;
+    e = 9;
+    d = 5;
+
+    w = e + d++ - cislo--; // 8 + 2++ - 3-- = 7 => d =3, cislo = 2
+    w2 = 11 - ++d * e; // 11 - 4 * 8 = -21
+
+    std::cout << w << std::endl;
+    std::cout << w2 << std::endl;
+
+
+    std::cin >> z;      //nacita zadanu klavesu do premennej z
+    if(e > d) {         //porovnava ci hodnota v premennej e je vacsia nez v premennej d
+        int t = 6;      //lokalna premenna, ktora je vidiet len v tejto podmienke if
+        std::cout << "Zadali ste: " << z << " a jeho je " << int(z) << std::endl; //vypise sa, ak je podmienka e>d pravdiva
+    }
+    else {
+        std::cout << "Nebola to pravda" << std::endl; //vypise sa, ak je podmienka e>d nepravdiva
+    }
 
     
-   const int vzdialenost = 10;  //konstanta, ktoru uz nemozeme v programe prepisovat
-                                //const mozeme pouzit s akymkolvek datovym typom (int, double, char, float, long, short, long long)
-                                //cosnst moze byt signed alebo unsigned => unsigned const int cislo = 3;
+    double k = 6.8, l;
+    e = 9;
+    d = 5;
+
+    l = round(k); //round() => funkcia v cmath, ktora zaokruhluje
+    w = e % d; // 9/5 
+     
+    std::cout << l << std::endl;
+    std::cout << round(k) << std::endl;
+    std::cout << w << std::endl;
 
 
-    std::cout << "Premenna int ma hodnotu: " << cislo << " a zabera " << sizeof(cislo) << " B." << std::endl;
-    std::cout << "Premenna double ma hodnotu: " << cislo2 << " a zabera " << sizeof(cislo2) << " B." << std::endl;
-    std::cout << "Premenna char ma hodnotu: " << znak << " a zabera " << sizeof(znak) << " B." << std::endl;
-    std::cout << "Premenna bool ma hodnotu: " << hodnota << " a zabera " << sizeof(hodnota) << " B." << std::endl;
-    std::cout << "Premenna float ma hodnotu: " << cislo3 << " a zabera " << sizeof(cislo3) << " B." << std::endl;
-    std::cout << "Premenna long ma hodnotu: " << cislo4 << " a zabera " << sizeof(cislo4) << " B." << std::endl;
-    std::cout << "Premenna long long ma hodnotu: " << cislo5 << " a zabera " << sizeof(cislo5) << " B." << std::endl;
-    std::cout << "Premenna short ma hodnotu: " << cislo6 << " a zabera " << sizeof(cislo6) << " B." << std::endl;
-    std::cout << "Premenna unsigned int ma hodnotu: " << a << " a zabera " << sizeof(a) << " B." << std::endl;
-    std::cout << "Premenna signed int ma hodnotu: " << b << " a zabera " << sizeof(b) << " B." << std::endl;
-    std::cout << "Premenna const int ma hodnotu: " << vzdialenost << " a zabera " << sizeof(vzdialenost) << " B." << std::endl;
 
-    std::cout << std::endl;
+    std::cout << 4 + 5 << std::endl;
+    std::cout << 4 - 5 << std::endl;
+    std::cout << 4 * 5 << std::endl;
+    std::cout << 4 % 5 << std::endl;
+    std::cout << int(c) << std::endl;
 
 
-    //Toto je jednoriadkovy komentar
+    std::cout << "Toto je retazec so specialnymi znakmi: \"Valika\", \\" << std::endl;
 
-    /* 
-    Toto je viacriadkovy komentar - program tieto casti ignoruje
-    */ 
-
-
-    //Vypise len hodnotu premennej
-   /* std::cout << cislo << std::endl;
-    std::cout << cislo2 << std::endl;
-    std::cout << znak << std::endl;
-    std::cout << hodnota << std::endl;
-    std::cout << cislo3 << std::endl;
-    std::cout << cislo4 << std::endl;
-    std::cout << cislo5 << std::endl;
-    std::cout << cislo6 << std::endl;
-    std::cout << a << std::endl;
-    std::cout << b << std::endl;
-    std::cout << vzdialenost << std::endl;
-    
-    std::cout << std::endl;*/
-
-
-    //Vypise len velkost datoveho typu v B (1 B = 8 bitov)
-   /* std::cout << sizeof(cislo) << std::endl;
-    std::cout << sizeof(cislo2) << std::endl;
-    std::cout << sizeof(znak) << std::endl;
-    std::cout << sizeof(hodnota) << std::endl;
-    std::cout << sizeof(cislo3) << std::endl;
-    std::cout << sizeof(cislo4) << std::endl;
-    std::cout << sizeof(cislo5) << std::endl;
-    std::cout << sizeof(cislo6) << std::endl;
-    std::cout << sizeof(a) << std::endl;
-    std::cout << sizeof(b) << std::endl;
-    std::cout << sizeof(vzdialenost) << std::endl;
-    
-    std::cout << std::endl;*/
-   
-    //Pre vystup "a,1,1.5"
-    std::cout << 'a' << ',' << a << ',' << cislo2 << std::endl;
    
     return 0;
 }
