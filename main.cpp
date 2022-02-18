@@ -31,6 +31,8 @@ int main() {        //vo funkcii su lokalne premenne, vidiet je len vo funkcii m
     e = 9;
     d = 5;
 
+    //Inkremntacie: premenna++, ++premenna
+    //Dekremntacia: premenna--, --premenna
     w = e + d++ - cislo--; // 8 + 2++ - 3-- = 7 => d =3, cislo = 2
     w2 = 11 - ++d * e; // 11 - 4 * 8 = -21
 
@@ -60,14 +62,31 @@ int main() {        //vo funkcii su lokalne premenne, vidiet je len vo funkcii m
     std::cout << w << std::endl;
 
 
-
     std::cout << 4 + 5 << std::endl;
     std::cout << 4 - 5 << std::endl;
     std::cout << 4 * 5 << std::endl;
     std::cout << 4 % 5 << std::endl;
     std::cout << int(c) << std::endl;
 
+    cislo = 10;
+    std::cout << cislo << std::endl;
 
+    cislo += 5; //k premennej cislo sa pripocita hodnota 5 a ulozi sa do premennej cislo
+    std::cout << cislo << std::endl;
+
+    cislo -= 7;
+    std::cout << cislo << std::endl;
+
+    cislo *= 2;
+    std::cout << cislo << std::endl;
+
+    cislo /= 2;
+    std::cout << cislo << std::endl;
+
+    cislo %= 6;
+    std::cout << cislo << std::endl;
+     
+    
     std::cout << "Toto je retazec so specialnymi znakmi: \"Valika\", \\" << std::endl;
 
    
