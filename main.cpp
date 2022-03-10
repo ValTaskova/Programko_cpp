@@ -12,7 +12,7 @@ int main() {        //vo funkcii su lokalne premenne, vidiet je len vo funkcii m
   // < > == <= >= !=
   // && -a, || - alebo
     
-  /* if (c < '0' || c > '9') { //cislo od '0' po '9'
+   if (c < '0' || c > '9') { //cislo od '0' po '9'
        std::cout << "je to cislo" <<std::endl;
    } 
    else if (c >= 'a' && c <= 'z') { //male pismeno od 'a' po 'z' 
@@ -24,7 +24,7 @@ int main() {        //vo funkcii su lokalne premenne, vidiet je len vo funkcii m
     
    else {
        std::cout << "je to nieco ine" <<std::endl;
-   }*/
+   }
 
     switch (c)
     {
@@ -44,9 +44,6 @@ int main() {        //vo funkcii su lokalne premenne, vidiet je len vo funkcii m
     default: std::cout << "default" << std::endl;
         break;
     }
-
-    
-    
    
     return 0;
 }
