@@ -1,49 +1,49 @@
 #include <iostream>
-#include<cmath>
-
-const int x = 6;    //globalna premenna, je vidiet v celom programe
+#include <string> //treba zahrnut aby sme mohli pouzivat string
 
 int main() {        //vo funkcii su lokalne premenne, vidiet je len vo funkcii main
 
-    int c;
+    //Napiste program pre vypocitanie BMI. Sptajte sa uzivatela na hmotnost a vysku, ktore jednotlivo nacitate.
+    //Po vypocitanie BMI vytvorte podmienky, ktore vypisu ci ma uzivatel podvahu, normalnu vahu, nadvahu alebo obezitu.
 
-    std::cin >> c;// 'a' 'z' 
+    double BMI, vyska, hmotnost; //premenne, ktore budete potrebovat
 
-  // < > == <= >= !=
-  // && -a, || - alebo
+    //Aka je vasa hmotnost
+    //nacitam
+    //Aka je vasa vyska
+    //nacitam
     
-   if (c < '0' || c > '9') { //cislo od '0' po '9'
-       std::cout << "je to cislo" <<std::endl;
-   } 
-   else if (c >= 'a' && c <= 'z') { //male pismeno od 'a' po 'z' 
-       std::cout << "je to male pismeno" <<std::endl;
-   }
-   else if (c >= 'A' && c <= 'Z') { //velke pismeno od 'A' po 'Z'
-        std::cout << "je to velke pismeno" <<std::endl;
-   }
-    
-   else {
-       std::cout << "je to nieco ine" <<std::endl;
-   }
+    BMI = hmotnost / (vyska*vyska);
 
-    switch (c)
-    {
-    case 1:
-        std::cout << "cislo 1" << std::endl;
-        //break;
-    case 2:
-        std::cout << "cislo 2" << std::endl;
-        break;
-    case 3:
-        std::cout << "cislo 3" << std::endl;
-        break;
-    case 4:
-        std::cout << "cislo 4" << std::endl;
-        break;
+     //menej ako 18 vratane = podvaha
+     //medzi 18-25 (bez 18 ale vratane 25) = normal
+     //medzi 25-30 (bez 25 ale vratane 30) = nadvaha
+     //nad 30 (bez 30) = obezita
+
+
+
+    std::string name = "Valeria ", surname = "Taskova";
+
+    std::cout << name << ", ahoj!"<< std::endl;
+    std::cout << name + surname << std::endl;       //pouzivame na spajanie retazcov
+
+    std::string name1;
+    std::cin >> name1;      //nacita retazec, ale konci, ked dame medzeru
+
+    std::string fullname;
+    getline (std::cin, fullname);   //nacita retazec aj medzerami, konci, ked dame enter
+    std::cout << fullname << std::endl;
+
+
+    //Napiste aplikaciu na overenie uzivatela. Zadajte si meno a heslo a potom uzivatela vyzvete, aby zadal
+    //meno a heslo. Pokial su oba udaje spravne, tak vypiste, ze je prihlaseny. Pokial bol jeden udaj zly (je jedno ktory),
+    //tak vypiste, ze meno alebo heslo je nespravne. Pouzite zlozenu podmienku.
+    //TIP: porovnavanie 2 stringov je rovnake ako porovnavanie 2 cisel
+
+    std::string meno = "admin", heslo = "heslo", p_meno, p_heslo;
+
     
-    default: std::cout << "default" << std::endl;
-        break;
-    }
+  
    
     return 0;
 }
