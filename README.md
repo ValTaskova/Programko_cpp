@@ -1,4 +1,4 @@
-# Programko C++ - Podmienky
+# Programko C++ - String
 
 V súbore main.cpp nájdete kód, ktorý obsahuje, to čo sme robili na dnešnej hodine:
 <ul> 
