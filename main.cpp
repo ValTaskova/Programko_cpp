@@ -1,49 +1,51 @@
 #include <iostream>
-#include <string> //treba zahrnut aby sme mohli pouzivat string
+#include <string> 
 
-int main() {        //vo funkcii su lokalne premenne, vidiet je len vo funkcii main
+void opakovanie(int pocet);
 
-    //Napiste program pre vypocitanie BMI. Sptajte sa uzivatela na hmotnost a vysku, ktore jednotlivo nacitate.
-    //Po vypocitanie BMI vytvorte podmienky, ktore vypisu ci ma uzivatel podvahu, normalnu vahu, nadvahu alebo obezitu.
-
-    double BMI, vyska, hmotnost; //premenne, ktore budete potrebovat
-
-    //Aka je vasa hmotnost
-    //nacitam
-    //Aka je vasa vyska
-    //nacitam
+int main() {        
+   
+    int num = 15;
+    opakovanie(num);
     
-    BMI = hmotnost / (vyska*vyska);
+    std::cout << std::endl << "Vnoreny For cyklus" << std::endl;
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+           if (i == j) 
+                std::cout << '*';
+            else if (i == (10-j-1))
+                std::cout << '*';
+           else                     //skuste vynechat else a porozmyslajte co sa stalo a preco sa to stalo
+                std::cout << '-';
+        }
+        std::cout << std::endl;
+    }
+   
+    std::cout << std::endl << "While cyklus" << std::endl;
+    int j = 0;      //skuste inicializovat k na 10
+    while (j < 10) {
+        std::cout << "j je: " << j << std::endl;
+        j++;
+        
+    }
 
-     //menej ako 18 vratane = podvaha
-     //medzi 18-25 (bez 18 ale vratane 25) = normal
-     //medzi 25-30 (bez 25 ale vratane 30) = nadvaha
-     //nad 30 (bez 30) = obezita
-
-
-
-    std::string name = "Valeria ", surname = "Taskova";
-
-    std::cout << name << ", ahoj!"<< std::endl;
-    std::cout << name + surname << std::endl;       //pouzivame na spajanie retazcov
-
-    std::string name1;
-    std::cin >> name1;      //nacita retazec, ale konci, ked dame medzeru
-
-    std::string fullname;
-    getline (std::cin, fullname);   //nacita retazec aj medzerami, konci, ked dame enter
-    std::cout << fullname << std::endl;
-
-
-    //Napiste aplikaciu na overenie uzivatela. Zadajte si meno a heslo a potom uzivatela vyzvete, aby zadal
-    //meno a heslo. Pokial su oba udaje spravne, tak vypiste, ze je prihlaseny. Pokial bol jeden udaj zly (je jedno ktory),
-    //tak vypiste, ze meno alebo heslo je nespravne. Pouzite zlozenu podmienku.
-    //TIP: porovnavanie 2 stringov je rovnake ako porovnavanie 2 cisel
-
-    std::string meno = "admin", heslo = "heslo", p_meno, p_heslo;
-
+    std::cout << std::endl << "Do-while cyklus" << std::endl;
+    int k = 0;      //skuste inicializovat k na 10
+    do
+    {
+        std::cout << "k je: " << k << std::endl;
+        k++;
+    } while (k < 10);       //nie je rozdiel medzi while a tymto do-while cyklom
     
-  
    
     return 0;
 }
+
+void opakovanie(int pocet){
+
+    std::cout << "For cyklus" << std::endl << "Pocet iteracii je " << pocet << std::endl;
+
+    for (int i = 0; i < pocet; i++) {
+            std::cout << i << std::endl;
+        }
+} 
