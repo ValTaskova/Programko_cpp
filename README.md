@@ -1,13 +1,12 @@
-# Programko C++ - String
+# Programko C++ - Cykly 1
 
 V súbore main.cpp nájdete kód, ktorý obsahuje, to čo sme robili na dnešnej hodine:
 <ul> 
-  <li>Zadanie príkladu pre BMI kalkuačku</li>
-  <li>Základne operácie s objektom string</li>
-  <li>Zadanie príkladu na prihlasovaciu aplikáciu</li>
+  <li>Cykly: for, while, do-while</li>
+  <li>Funkciu mimo main</li>
+  <li>Vnorený for cyklus</li>
 </ul>
-String slúži na načítanie reťazca do jednej premennej. Od znaku ho odlišujeme úvodzovkami (hovorili sme si, že znak označujeme apostrofmi). 
-Operácie s nim sú jednoduché a nie je potrebné používať funkcie, napr. pre spájanie dvoch a viacerých stringov nám slúži +. String môžeme načítať priamo cez objekt cin, avšak len po medzeru, pretože tam sa cin zastaví a ostatné znaky si uloží do pamäte (buffer). Pokiaľ by sme teraz za ním napísali ďalšie načítavanie stringu alebo znaku, program použije znaky v buffery. Ak by sme chceli načítať reťazec aj s medzerou, je potrebné použiť funkciu getline, ktorá sa zastaví až pri odriadkovaní (enter).
+Cykly sa v programovaní využívajú stále. Najviac sa používajú for a while. For cyklus sa zvyčajne používa, keď vieme koľkokrát chceme niečo opakovať - iterovať. While cyklus sa používa keď hodnoty porovnávame, <strong>DOKIAĽ</strong> sa niečo nestane. Toto platí aj pre Do-while cyklus, ale pokiaľ je podmmienka hneď od začiatku nesplnená, tak sa Do-while cyklus jedenkrát vykoná. Cykly môžeme do seba aj vnárať. Ak chceme udržať kód prehľadný, je dobré ho rozdeliť do menších celkov - funkcií.
 <br/><br/>
 Kód si môžete skopírovať, vyskúšať alebo uložiť, je to na vás.
 Budem sem pridávať všetky kódy z hodín, ktoré nájdete v pomenovaných priečinkoch, pričom kód z poslednej hodiny bude vždy v hlavnom main.cpp.
