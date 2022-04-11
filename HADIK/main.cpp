@@ -49,8 +49,12 @@ void Setup()
     score = 0;
     gameOver = false;
     flag = 0;
-    fruitX = (rand() % (width - 3) + 1);
-    fruitY = (rand() % (height - 3) + 1);
+    fruitX = (rand() % (width - 4) + 2);    //pre unicode znaky
+    fruitY = (rand() % (height - 4) + 2);
+
+    /*fruitX = (rand() % (width - 2) + 1);    //pre ASCII znaky
+    fruitY = (rand() % (height - 2) + 1);*/
+
     x = width / 2;
     y = height / 2;
     nTail = 0;
