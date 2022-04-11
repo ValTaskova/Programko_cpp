@@ -21,7 +21,6 @@ void Logic();
 
 int main()
 {
-    
     system("Color 0A");
     Setup();
     while (gameOver != true)
@@ -61,7 +60,9 @@ void Draw()
 {
     SetConsoleOutputCP(CP_UTF8);
     setvbuf(stdout, nullptr, _IOFBF, 1000);
+	
     system("cls");
+	
     std::string wall = u8"█";
     std::string snake = u8"◉";
     std::string tail = u8"●";
@@ -102,15 +103,12 @@ void Draw()
     std::cout << std::endl;
     std::cout << "Skore: " << score << std::endl;
     std::cout << "Pre ukoncenie hry stlacte x";
-    
-
 }
 
 void Input()
 {
         //priradenie WSAD klaves k smerom UP, DOWN, LEFT, RIGHT a klavesy X      
         //pre ukoncenie hry
-
          if (_kbhit()) {
     
             switch (_getch())
@@ -181,12 +179,12 @@ void Logic()
     /*
     if (x >= width)
         x = 0; 
-	else if (x < 0) 
+    else if (x < 0) 
         x = width - 1;
 
-	if (y >= height)
+    if (y >= height)
         y = 0; 
-	else if (y < 0)
+    else if (y < 0)
         y = height - 1;
     */
  
@@ -203,5 +201,4 @@ void Logic()
         fruitY = (rand() % (height - 3)) + 1;
         nTail++;
     }
-
 }
