@@ -8,7 +8,7 @@ ste si chceli zmeniť farbu tak tu nájdete ako: https://www.geeksforgeeks.org/h
 Čo sa týka vykreslovania ovocia, generovanie súradníc v prípade pouźitia ASCII znakov by som dala následovne:</br>
 <code>fruitX = (rand() % (width - 2) + 1);</code></br>
 <code>fruitY = (rand() % (height - 2) + 1);</code></br>
-Týmto spôsobom sa mi vygeneruje súradnice od 1 po 18, čo je presne to, čo chcem, pretože hranice sú na pozíciach 0 a 19. Teda nestane sa, že by sa ovocie stratilo v hraniciach. </br>
+Týmto spôsobom sa mi vygenerujú súradnice od 1 po 18, čo je presne to, čo chcem, pretože hranice sú na pozíciach 0 a 19. Teda nestane sa, že by sa ovocie stratilo v hraniciach. </br>
 V prípade unicode znakov, som zvolila kód pre súradnice takto: </br>
 <code>fruitX = (rand() % (width - 4) + 2);</code></br>
 <code>fruitY = (rand() % (height - 4) + 2);</code></br>
