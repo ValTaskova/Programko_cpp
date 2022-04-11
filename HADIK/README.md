@@ -6,5 +6,5 @@ podmienky, teda čím je skóre vyššie, tým rýchlejšie ide hra. Doplnila so
 ste si chceli zmeniť farbu tak tu nájdete ako: https://www.geeksforgeeks.org/how-to-print-colored-text-in-c/
 <br/><br/>
 Čo sa týka vykreslovania ovocia, generovanie súradníc by som dala následovne:
-<code>fruitX = (rand() % (width - 3) + 1);<br/>
-    fruitY = (rand() % (height - 3) + 1);</code>
+<code>fruitX = (rand() % (width - 3) + 1);</code></br>
+<code>fruitY = (rand() % (height - 3) + 1);</code>
