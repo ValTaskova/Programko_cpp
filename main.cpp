@@ -19,10 +19,19 @@ int main() {
     for (int i = 0; i < 100; i++)
     {
         pole[i] = rand();
-        std::cout << pole[i] << std::endl;
+        //std::cout << pole[i] << std::endl;
     }
     
-    int menu = 0;
+    std::cout << "Pole je vygenerovane. Vyberte si z nasledujucich moznosti:" << std::endl;
+    std::cout << "1) Vypocitanie priemeru" << std::endl;
+    std::cout << "2) Najdenie najvacsieho cisla" << std::endl;
+    std::cout << "3) Najdenie najmensieho cisla" << std::endl;
+    std::cout << "4) Vypocitanie poctu cisel, ktore su vacsie nez priemer" << std::endl;
+    std::cout << "5) Vypocitanie poctu cisel, ktore su mensie nez priemer" << std::endl;
+    std::cout << "6) Ukoncenie programu" << std::endl;
+
+    int menu;
+    std::cin >> menu;
 
     while (menu != 6) {
 
@@ -47,43 +56,16 @@ int main() {
         default:
             break;
         }
-    
-    
-    
-    std::cout << "Najvacsie cislo: " << max << std::endl;
-    
-    int min = INT_MAX;
 
-    for (int i = 0; i < 100; i++)
-    {
-        if (pole[i] < min) {
-            min = pole[i];
-        }
-    }
-    
-    std::cout << "Najmensie cislo: " << min << std::endl;
+        std::cout << "Vyberte si z nasledujucich moznosti:" << std::endl;
+        std::cout << "1) Vypocitanie priemeru" << std::endl;
+        std::cout << "2) Najdenie najvacsieho cisla" << std::endl;
+        std::cout << "3) Najdenie najmensieho cisla" << std::endl;
+        std::cout << "4) Vypocitanie poctu cisel, ktore su vacsie nez priemer" << std::endl;
+        std::cout << "5) Vypocitanie poctu cisel, ktore su mensie nez priemer" << std::endl;
+        std::cout << "6) Ukoncenie programu" << std::endl;
 
-    int pocet = 0;
-
-    for (int i = 0; i < 100; i++)
-    {
-        if (pole[i] > priemer) {
-            pocet++;
-        }
-    }
-    
-    std::cout << "Pocet vacsich cisle nez priemer: " << pocet << std::endl;
-
-    int pocet1 = 0;
-
-    for (int i = 0; i < 100; i++)
-    {
-        if (pole[i] < priemer) {
-            pocet1++;
-        }
-    }
-    
-    std::cout << "Pocet mensich cisle nez priemer: " << pocet1 << std::endl;
+        std::cin >> menu;
     }
    
     return 0;
@@ -101,7 +83,7 @@ double vypocitaj_priemer(int pole[]) {
     priemer = (double)sum / 100;
 
     std::cout << "Sucet: " << sum << std::endl;
-    std::cout << "Priemer: " << priemer << std::endl;
+    std::cout << "Priemer: " << priemer << std::endl << std::endl;
 
     return priemer;
 }
@@ -115,13 +97,43 @@ int max = INT_MIN;
             max = pole[i];
         }
     }
+    std::cout << "Najvacsie cislo: " << max << std::endl << std::endl;
 }
 void vypocitaj_min(int pole[]) {
+    int min = INT_MAX;
+
+    for (int i = 0; i < 100; i++)
+    {
+        if (pole[i] < min) {
+            min = pole[i];
+        }
+    }
+    
+    std::cout << "Najmensie cislo: " << min << std::endl << std::endl;
 
 }
 void vypocitaj_vacsie_nez_priemer(int pole[], double priemer) {
+    int pocet = 0;
 
+    for (int i = 0; i < 100; i++)
+    {
+        if (pole[i] > priemer) {
+            pocet++;
+        }
+    }
+    
+    std::cout << "Pocet vacsich cisle nez priemer: " << pocet << std::endl << std::endl;
 }
-void vypocitaj_mensie_nez_priemer(int pole[], double priemer) {
 
+void vypocitaj_mensie_nez_priemer(int pole[], double priemer) {
+    int pocet = 0;
+
+    for (int i = 0; i < 100; i++)
+    {
+        if (pole[i] < priemer) {
+            pocet++;
+        }
+    }
+    
+    std::cout << "Pocet mensich cisle nez priemer: " << pocet << std::endl << std::endl;
 }
